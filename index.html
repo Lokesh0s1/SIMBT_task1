@@ -58,7 +58,9 @@
 							<div id="corner-tl" class="corner"></div>
 							<div id="corner-tr" class="corner"></div>
 							<h3>What I Do</h3>
-							<p>I'm a final year student of computer science & engineering, looking to become a front-end webdeveloper.</p>
+							<p>I'm a final year student of computer science & engineering, 
+								looking to become a front-end webdeveloper.
+							</p>
 							<div id="corner-br" class="corner"></div>
 							<div id="corner-bl" class="corner"></div>
 						</div>
@@ -72,11 +74,12 @@
 		<div class="main-container">
 
 			<div class="about-wrapper">
-				<div class="about-me">
+				<div id="about" class="about-me">
 					<h4>More about me</h4>
-
-					<p>I have a relevant experience in Web Development especially in Front-end part where I learnd to give colors and styles to the website.</p>
-
+					<p>I have a relevant experience in Web Development especially in Front-end part.
+					Hi Everyone My name is Lokesh Yadav I aspire to be a Front-end Web Developer
+					Currently I am in third year of Engineering at PICT, Pune.
+					I have known and worked on projects using HTML, CSS, JavaScript, MySql, MongoDb and Php.</p>
 					<p>I'm learning more about ReactJs</p>
 					<hr>
 
@@ -165,7 +168,8 @@
 	<section class="s2">
 		<div class="main-container">
 			<a href=""></a>
-			<h3 style="text-align: center;">Get In Touch</h3>
+			<h2 class="contact-heading">Contact Me</h2>
+                <h3 class="contact-subheading">Questions, thoughts, or just want to say hello?</h3>
 
 			<form id="contact-form" >
 				<input type="hidden" name="_captcha" value="false">
@@ -184,12 +188,74 @@
 				<label>Message</label>
 				<input type="text" class="input-field" name="message"requi
 				 >
-
-				<button type="submit" id="submit-btn"><a href="thanks.html">Send</a> </button>
+				 <button type="submit" class="btn-pink" id="submit-btn">
+					Send Message <i class="submit-icon fa-solid fa-paper-plane"></i>
+				</button>
 			</form>
 		</div>
 	</section> 
 
-	<script  src="script.js"></script>
+
+	<footer>
+		<div class="container footer-top">
+			<div class="footer-items">
+				<div>
+					<a href="#about">ABOUT ME</a>
+				</div>
+				<div>
+					<a href="#skills">PROJECTS</a>
+				</div>
+				<div>
+					<a href="#skills">SKILLS</a>
+				</div>
+				<div>
+					<a href="#contact">CONTACT</a>
+				</div>
+			</div>
+			<div class="icon-wrapper">
+				<i class="fa-brands fa-linkedin icon"></i>
+				<i class="fa-brands fa-github icon"></i>
+				<i class="fa-brands fa-twitter icon"></i>
+				<i class="fa-brands fa-instagram icon"></i>
+				<i class="fa-regular fa-envelope icon"></i>
+			</div>
+		</div>
+		<p class="copyright">Made with <i class="fa-solid fa-heart"></i> by Lokesh Yadav | &#169Copyright</p>
+	</footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script  src="script.js"></script>
+<script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+<script>
+	var typeData = new Typed(".role", {
+		strings: [
+			"Full Stack Developer",
+			"Web Developer",
+			"UI-UX Designer",
+			"Backend Developer",
+			"Coder",
+		],
+		loop: true,
+		typeSpeed: 100,
+		backSpeed: 80,
+		backDelay: 1000,
+	});
+
+	var tablinks = document.getElementsByClassName("tab-links");
+	var tabcontents = document.getElementsByClassName("tab-contents");
+	function opentab(tabname) {
+		for (tablink of tablinks) {
+			tablink.classList.remove("active-link")
+		}
+		for (tabcontent of tabcontents) {
+			tabcontent.classList.remove("active-tab")
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+
+</script>
+
 </body>
 </html>
